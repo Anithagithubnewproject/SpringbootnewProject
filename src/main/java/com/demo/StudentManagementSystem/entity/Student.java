@@ -24,16 +24,28 @@ public class Student {
 	@Column(name = "email")
 	private String email;
 	
+	@Column(name="salary")
+	private long salary;
+	
 	public Student() {
 		
 	}
 	
-	public Student(String firstName, String lastName, String email) {
+	public Student(String firstName, String lastName, String email,long salary) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
+		this.salary=salary;
 	}
+	public long getSalary() {
+		return salary;
+	}
+
+	public void setSalary(long salary) {
+		this.salary = salary;
+	}
+
 	public int getId() {
 		return id;
 	}
